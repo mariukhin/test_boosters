@@ -1,0 +1,45 @@
+@import '~normalize.css';
+@import './colors.css';
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: var(--blue-zodiac);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.heading-select
+  .ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  color: var(--blue-zodiac) !important;
+  background-color: var(--ebb) !important;
+  font-weight: 500 !important;
+}
+
+.blockAlignLeft > div {
+  text-align: left;
+}
+
+.blockAlignCenter > div {
+  text-align: center;
+}
+
+.blockAlignRight > div {
+  text-align: right;
+}
