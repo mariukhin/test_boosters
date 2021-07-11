@@ -1,15 +1,11 @@
 import { combineReducers } from 'redux';
 
-import execution from 'Reducers/execution';
-import orders from 'Reducers/order';
-import portfolio from 'Reducers/portfolio';
-import transaction from 'Reducers/transaction';
+import country from 'Reducers/country';
+import global from 'Reducers/global';
 
 const rootReducer = combineReducers({
-  execution,
-  orders,
-  portfolio,
-  transaction,
+  country,
+  global,
 });
 
 export default rootReducer;

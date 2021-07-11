@@ -1,17 +1,24 @@
 import API from 'Services/API';
-import { getOrdersListSuccess, getOrdersListError } from 'Actions/global';
+import {
+  getGlobalStatisticsSuccess,
+  getGlobalStatisticsError,
+} from 'Actions/global';
 
-export const getGlobalStatistics = ({ dateFrom, dateTo }) => {
+export const getGlobalStatistics = (dateFrom, dateTo) => {
   return dispatch => {
-    const url = '/world';
+    let url = '/world';
+
+    if (dateFrom) {
+      url += `?from=${dateFrom}&to=${dateTo}`;
+    }
 
     API()
       .get(url)
       .then(res => {
-        dispatch(getOrdersListSuccess(res));
+        dispatch(getGlobalStatisticsSuccess(res));
       })
       .catch(err => {
-        dispatch(getOrdersListError(err));
+        dispatch(getGlobalStatisticsError(err));
       });
   };
 };
